@@ -1,0 +1,21 @@
+<div class="teammate">
+	<div class="info">
+		<div class="image">
+			<img ng-src="{{teammate.profilePicture}}" class="profile-picture">
+		</div>
+		<div class="text">
+			<strong>{{teammate.firstName}} {{teammate.lastName}}</strong>
+			<p>Contributes to {{teammate.relatedGoals}} of your goals</p>
+		</div>
+	</div>
+	<div class="review">
+		<form ng-submit="send(teammate)" name="review">
+			<label>1. How would you rate {{teammate.firstName}} at teamwork?</label>
+			<star-rating ng-model="teammate"></star-rating>
+			<label>2. What's one thing {{teammate.firstName}} could do to improve {{teammate.gender === 'male' ? 'his' : 'her'}} teamwork?</label>
+			<textarea></textarea>
+			<input type="submit" value="Send"></input>
+		</form>
+		<a class="decline" ng-click="decline(teammate)">Decline request</a>
+	</div>
+</div>

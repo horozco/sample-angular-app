@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betterworks Rating Component</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/stars.css">
+  </head>
+  <body ng-app="myApp">
+
+    <div ng-controller="ReviewsController as ctrl">
+      <div ng-repeat="teammate in ctrl.teammates">
+        <teammate-review teammate="teammate" ng-if="teammate.visible"></teammate-review>
+      </div>
+    </div>
+  
+    <script src="scripts/angular-1.5.8.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/directives/teammate-review.js"></script>
+    <script src="scripts/directives/star-rating.js"></script>
+    <script src="scripts/controllers/reviews-controller.js"></script>
+    <script src="scripts/controllers/teammate-review-controller.js"></script>
+  </body>
+</html>

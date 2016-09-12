@@ -1,0 +1,4 @@
+<fieldset class="rating">
+  <input ng-repeat-start="star in stars" type="radio" id="star_{{teammate.id}}_{{star.value}}" value="{{star.value}}" name="rating"  ng-click="evaluate(star.value)">
+  <label ng-repeat-end class="full" for="star_{{teammate.id}}_{{star.value}}" title="{{star.message}}"></label>
+</fieldset>
